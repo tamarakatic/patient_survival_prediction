@@ -1,0 +1,11 @@
+convert:
+  ethnicity => 7 categories
+  gender => 2 categories
+  hospital_admit_source => 16 categories
+  icu_admit_source => 6 categories
+  icu_stay_type => 3 categories
+  icu_type => 8 categories
+  apache_3j_bodysystem => 12
+  apache_2_bodysystem => 11
+  readmission_status => don't need as it is all 0
+  weight => delete NA
