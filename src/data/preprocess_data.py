@@ -1,16 +1,3 @@
-# TODO convert:
-# ethnicity => 7 categories
-# gender => 2 categories
-# hospital_admit_source => 16 categories
-# icu_admit_source => 6 categories
-# icu_stay_type => 3 categories
-# icu_type => 8 categories
-# apache_3j_bodysystem => 12
-# apache_2_bodysystem => 11
-# readmission_status => don't need as it is all 0
-# weight => delete NA
-# df = df.loc[:, df.isin([' ','NA', 0]).mean() < .6]
-
 import pandas as pd
 import numpy as np
 
@@ -99,23 +86,8 @@ def preprocess_data(Train=True):
 X, y = preprocess_data(Train=True)
 X_test, y_test = preprocess_data(Train=False)
 
-# model = LinearDiscriminantAnalysis()
-#kfold = StratifiedKFold(n_splits=5)
-#result = cross_val_score(model, X, y, cv=kfold, scoring='accuracy')
-#predictions = cross_val_predict(model, X, y, cv=kfold)
-#print(result.mean())
-
-#X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
-
 rf_clf = RandomForestClassifier()
-#grid_clf = GridSearchCV(rf_clf, param_grid, cv=10)
-#grid_clf.fit(X_train, y_train.values.ravel())
-#print(grid_clf.best_params_)
-
 rf_clf.fit(X, y)
-#rf_pred = rf_clf.predict(X_test)
-#print(confusion_matrix(y_test, rf_pred))
-#print(accuracy_score(y_test, rf_pred))
 
 rf_prob = rf_clf.predict_proba(X_test)
 rf_prob = [p[1] for p in rf_prob]
