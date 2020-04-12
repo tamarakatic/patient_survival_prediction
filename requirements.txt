@@ -3,3 +3,6 @@ sklearn
 jupyter
 matplotlib
 catboost
+xgboost
+seaborn
+shap
