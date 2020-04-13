@@ -131,3 +131,5 @@ dmypy.json
 
 # catboost info folder
 catboost_info/
+**/*.Rhistory
+**/*.json
