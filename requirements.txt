@@ -6,3 +6,5 @@ catboost
 xgboost
 seaborn
 shap
+imblearn
+colorama
