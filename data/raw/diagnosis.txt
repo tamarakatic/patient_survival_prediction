@@ -1,0 +1,7 @@
+aids
+cirrhosis
+diabetes_mellitus
+hepatic_failure
+immunosuppression
+lymphoma
+solid_tumor_with_metastasis

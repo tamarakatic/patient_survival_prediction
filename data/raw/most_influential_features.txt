@@ -1,0 +1,7 @@
+bun
+creatinine
+hco3
+hemaglobin
+hematocrit
+potassium
+intubated_apache
